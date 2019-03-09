@@ -1,0 +1,12 @@
+<app-server></app-server>
+<app-server></app-server>
+
+<button (click)="show = !show">{{show ? 'show warning-msg' : 'show success-msg'}}</button>
+
+<div *ngIf="show; else incorect">
+    <app-success-alert></app-success-alert>
+</div>
+<ng-template #incorect>
+    <app-warning-alert></app-warning-alert>
+</ng-template>
+<br>
