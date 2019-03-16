@@ -21,11 +21,22 @@ export class ServersComponent implements OnInit {
   ngOnInit() {
   }
 
+  /**
+ * The onResetButtonClick will update the newUsername instance and
+ * will make the input value empty and disable the button 
+ */
   onResetButtonClick(){
     this.newUsername = this.userName;
     this.enableButton = false;
     this.userName = '';
   }
+  
+ /**
+   *  The onUpdateUserName will check if the input value is empty.
+   * 
+   * @param event get the input value
+
+   */
   onUpdateUserName(event: any){
     if (this.userName === '') {
       this.enableButton = false;
