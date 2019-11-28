@@ -5,8 +5,18 @@
       <hr>
       <app-servers></app-servers>
       <hr>
+      <h3>First Assignment</h3>
       <app-warning-alert></app-warning-alert>
       <app-success-alert></app-success-alert>
+      <hr>
+      <h3>Second Assignment</h3>
+      <label>Username</label>
+      <input type="text" class="form-control" [(ngModel)]="username">
+      <p>{{ username }}</p>
+      <button
+        class="btn btn-primary"
+        [disabled]="username === ''"
+        (click)="username = ''">Reset User</button>
     </div>
   </div>
 </div>
