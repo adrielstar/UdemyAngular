@@ -6,4 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  events:number[] = [];
+
+  onEventEmitted(eventData:{number: number}) {
+    this.events.push(eventData.number);
+  }
+
+  isEven(number: number):boolean{
+    if(number % 2 == 0){
+      return true;
+    }
+    return false;
+  }
+
 }
