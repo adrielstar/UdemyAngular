@@ -14,10 +14,7 @@ export class AppComponent {
   }
 
   isEven(number: number):boolean{
-    if(number % 2 == 0){
-      return true;
-    }
-    return false;
+    return number % 2 == 0;
   }
 
 }
